@@ -121,7 +121,7 @@
             
             <nav class="navigation">
                 <ul class="list-unstyled">
-                    <li class="has-submenu active"><a href="dashboard.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Productos</span></a>
+                    <li class="has-submenu active"><a href="dashboard.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Proyectos</span></a>
                     </li>
                     <li class="has-submenu"><a href="tipo_de_pago.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Tipo de Pago</span></a>
                     </li>                    
@@ -149,9 +149,9 @@
             <hr class="no-margn">
             
             <div class="page-header"><h3 id="page-title">Lista de Registrados</h3></div>
-            <div>
+            <!-- <div>
                 <a href="exportar.producto.php" target="_blank" class="btn btn-primary">Exportar productos</a>
-            </div>
+            </div>-->
             <div class='margin-bottom-1em overflow-hidden'>
                 <div id='read-banners' class='btn btn-primary pull-right display-none'>
                     <span class='glyphicon glyphicon-list'></span> Listar Banners

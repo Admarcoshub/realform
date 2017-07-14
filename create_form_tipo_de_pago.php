@@ -12,7 +12,7 @@ $num = $stmt->rowCount();
 
 ?>
 
-<form id="fr" action="#" enctype="multipart/form-data" method="post">
+<form id="fr" action="tipo_de_pago.php" enctype="multipart/form-data" method="post">
        <table class='table table-hover table-responsive table-bordered'>
         <tr class="des">
             <td>Codigo</td>
