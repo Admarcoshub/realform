@@ -24,5 +24,26 @@ class Proyecto {
         $stmt->execute(); 
         return $stmt;   
     }
-}
+
+    function delete () {
+        $query = "UPDATE
+            " . $this->table_name . "
+            SET 
+                estado= :estado
+
+            WHERE
+                idproyecto = :id";
+
+        $stmt = $this->conn->prepare($query);
+        
+        $stmt->bindParam('estado' , $this->estado);
+        $stmt->bindParam('id' , $this->id);
+
+        if ($stmt->execute()) {
+            return true;
+            } else {
+            return false;    
+            }
+        }
+    }
 ?>

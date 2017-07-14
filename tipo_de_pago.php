@@ -171,7 +171,7 @@
         
         
         <footer class="container-fluid footer">
-          Copyright &copy; 2017 <a href="http://jorgecanari.com/" target="_blank">Jorge Cañari</a>
+          Copyright &copy; 2017 <a href="http://jorgecanari.com/" target="_blank">Marcos Galiano</a>
             <a href="#" class="pull-right scrollToTop"><i class="fa fa-chevron-up"></i></a>
         </footer>
         

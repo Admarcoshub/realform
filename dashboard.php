@@ -172,10 +172,9 @@
         
         
         <footer class="container-fluid footer">
-          Copyright &copy; 2017 <a href="http://jorgecanari.com/" target="_blank">Jorge Cañari</a>
+          Copyright &copy; 2017 <a href="http://jorgecanari.com/" target="_blank">Marcos Galiano</a>
             <a href="#" class="pull-right scrollToTop"><i class="fa fa-chevron-up"></i></a>
-        </footer>
-        
+        </footer>        
     
     </section>
 
@@ -192,6 +191,54 @@
   <script src="assets/js/plugins/bootstrap-select/bootstrap-select.min.js"></script>
   <script src="assets/js/app/custom.js" type="text/javascript"></script>
   <script src="assets/js/tinymce/tinymce.min.js" type="text/javascript"></script>
-  <script src="assets/js/main.js" type="text/javascript"></script>
+  <!--<script src="assets/js/main.js" type="text/javascript"></script>-->
+  <script>
+    /*$(document).ready(function() {
+        //$('#loader-image').show();
+        showProyectos();
+    
+      $(document).on( 'click', '.delete-btn', function() {
+        if(confirm('Estas seguro?')) {
+          var idproyecto = $(this).closets('td').find('proyecto_id').text();
+          $.post('delete.proyecto.php' , { id: idproyecto} )
+            .done(function(data) {
+              //$(#loader-image).show();
+              showProyectos();         
+        });
+      }
+    });*/
+$(document).ready(function(){
+    $('#loader-image').show();
+    showProductos();
+    function showProductos(){
+            
+        changePageTitle('Lista de Productos');
+        
+        $('#page-content').fadeOut('slow', function(){
+            $('#page-content').load('read.php', function(){
+                $('#loader-image').hide(); 
+                $('#page-content').fadeIn('slow');
+            });
+        });
+    }
+    $(document).on('click', '.delete-btn', function(){
+        if(confirm('Estas seguro?')){
+            var idproyecto = $(this).closest('td').find('.producto-id').text();
+            $.post("delete.proyectos.php", { id: idproyecto })
+                .done(function(data){
+                    $('#loader-image').show();
+                    showProductos();
+                });
+        }
+    });
+    function changePageTitle(page_title){   
+        $('#page-title').text(page_title);
+        document.title=page_title;
+    }
+});
+  </script>
+
+
+
 </body>
 </html>
